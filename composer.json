@@ -1,0 +1,14 @@
+{
+    "name": "arkadiy/php-project1",
+    "description": "An educational project in written in PHP",
+    "bin": [
+      "bin/brain-games"
+    ],
+    "authors": [
+        {
+            "name": "Arkadiy93",
+            "email": "arkadiy93@hotmail.com"
+        }
+    ],
+    "require": {}
+}
