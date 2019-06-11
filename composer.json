@@ -11,5 +11,7 @@
             "email": "arkadiy93@hotmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "arkadiy/php-project1": "dev-master"
+    }
 }
