@@ -4,6 +4,7 @@
     "bin": [
       "bin/brain-games"
     ],
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Arkadiy93",
