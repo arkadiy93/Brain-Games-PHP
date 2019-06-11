@@ -5,6 +5,9 @@
       "bin/brain-games"
     ],
     "minimum-stability": "dev",
+    "scripts": {
+      "phpcs": "phpcs"
+    },
     "authors": [
         {
             "name": "Arkadiy93",
@@ -19,5 +22,8 @@
   },
     "require": {
         "wp-cli/php-cli-tools": "dev-master"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
     }
 }
