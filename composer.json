@@ -11,7 +11,13 @@
             "email": "arkadiy93@hotmail.com"
         }
     ],
+    "autoload": {
+      "psr-4": {
+        "Php\\Project1\\": "src/"
+      },
+      "files": ["src/cli.php"]
+  },
     "require": {
-        "arkadiy/php-project1": "dev-master"
+        "wp-cli/php-cli-tools": "dev-master"
     }
 }
