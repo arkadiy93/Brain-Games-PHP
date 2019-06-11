@@ -2,4 +2,4 @@
 
 <?php
 
-echo "Hello from brain games \n";
+echo "Welcome to the Brain Games! \n";
