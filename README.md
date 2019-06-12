@@ -12,6 +12,7 @@ A simple command line game written in PHP
 * brain-even
 * brain-calc
 * brain-gcd
+* brain-progression
 
 ### Brain-even
 
@@ -24,3 +25,7 @@ A simple command line game written in PHP
 ### Brain-gcd
 
 [![asciicast](https://asciinema.org/a/251283.svg)](https://asciinema.org/a/251283)
+
+### Brain-progression
+
+[![asciicast](https://asciinema.org/a/251295.svg)](https://asciinema.org/a/251295)
