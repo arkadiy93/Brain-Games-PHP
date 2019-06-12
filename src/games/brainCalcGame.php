@@ -18,7 +18,7 @@ function getCorrectAsnwer($randNum1, $randNum2, $sign)
 
 function startBrainCalc()
 {
-    $introLine = "Answer \"yes\" if number even otherwise answer \"no\". \n";
+    $introLine = "What is the result of the expression?\n";
     $getRoundData = function () {
         $minNumRange = 1;
         $maxNumRange = 10;

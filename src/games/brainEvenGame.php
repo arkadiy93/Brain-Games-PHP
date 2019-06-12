@@ -6,7 +6,7 @@ use function Php\Project1\Index\startGame;
 
 function startBrainEven()
 {
-    $introLine = "Answer \"yes\" if number even otherwise answer \"no\". \n";
+    $introLine = "Answer \"yes\" if number even otherwise answer \"no\".\n";
     $getRoundData = function () {
         $minNumRange = 1;
         $maxNumRange = 20;

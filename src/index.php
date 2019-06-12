@@ -5,10 +5,10 @@ namespace Php\Project1\Index;
 use function \cli\line;
 use function \cli\prompt;
 
-function startIntro()
+function startIntro($introLine)
 {
     line("Welcome to the Brain Game!");
-    line();
+    line("{$introLine}\n");
     $name = prompt('May I have your name?');
     line("Hello, %s! \n", $name);
     return $name;
