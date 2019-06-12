@@ -2,7 +2,8 @@
     "name": "arkadiy/php-project1",
     "description": "An educational project in written in PHP",
     "bin": [
-      "bin/brain-games"
+      "bin/brain-games",
+      "bin/brain-even"
     ],
     "minimum-stability": "dev",
     "scripts": {
@@ -18,7 +19,7 @@
       "psr-4": {
         "Php\\Project1\\": "src/"
       },
-      "files": ["src/cli.php"]
+      "files": ["src/cli.php", "src/games/brainEvenGame.php", "src/index.php"]
   },
     "require": {
         "wp-cli/php-cli-tools": "dev-master"
