@@ -32,3 +32,5 @@ A simple command line game written in PHP
 [![asciicast](https://asciinema.org/a/251295.svg)](https://asciinema.org/a/251295)
 
 ### Brain-prime
+
+[![asciicast](https://asciinema.org/a/251303.svg)](https://asciinema.org/a/251303)
