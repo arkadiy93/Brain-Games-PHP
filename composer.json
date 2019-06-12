@@ -5,7 +5,8 @@
       "bin/brain-games",
       "bin/brain-even",
       "bin/brain-calc",
-      "bin/brain-gcd"
+      "bin/brain-gcd",
+      "bin/brain-progression"
     ],
     "minimum-stability": "dev",
     "scripts": {
@@ -26,7 +27,8 @@
         "src/index.php",
         "src/games/brainEvenGame.php",
         "src/games/brainCalcGame.php",
-        "src/games/brainGcdGame.php"
+        "src/games/brainGcdGame.php",
+        "src/games/brainProgressionGame.php"
       ]
   },
     "require": {
