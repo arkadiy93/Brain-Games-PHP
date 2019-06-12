@@ -11,6 +11,7 @@ A simple command line game written in PHP
 ### Game modes
 * brain-even
 * brain-calc
+* brain-gcd
 
 ### Brain-even
 
@@ -18,4 +19,8 @@ A simple command line game written in PHP
 
 ### Brain-calc
 
-[![asciicast](https://asciinema.org/a/251280.svg)](https://asciinema.org/a/251280)
+[![asciicast](https://asciinema.org/a/251287.svg)](https://asciinema.org/a/251287)
+
+### Brain-gcd
+
+[![asciicast](https://asciinema.org/a/251283.svg)](https://asciinema.org/a/251283)
