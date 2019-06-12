@@ -19,7 +19,12 @@
       "psr-4": {
         "Php\\Project1\\": "src/"
       },
-      "files": ["src/cli.php", "src/games/brainEvenGame.php", "src/index.php"]
+      "files": [
+        "src/cli.php",
+        "src/index.php",
+        "src/games/brainEvenGame.php",
+        "src/games/brainCalcGame.php"
+      ]
   },
     "require": {
         "wp-cli/php-cli-tools": "dev-master"

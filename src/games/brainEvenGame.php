@@ -1,21 +1,19 @@
 <?php
 
-namespace Php\Project1\Games\brainEvenGame;
+namespace Php\Project1\Games\BrainEvenGame;
 
-use function \cli\line;
-use function \cli\prompt;
-use function Php\Project1\Index\askQuestions;
+use function Php\Project1\Index\startGame;
 
-function startGame()
+function startBrainEven()
 {
-    line("Welcome to the Brain Game!");
-    line("Answer \"yes\" if number even otherwise answer \"no\". \n");
-    $name = prompt('May I have your name?');
-    line("Hello, %s! \n", $name);
-    $hasWon = askQuestions();
-    if ($hasWon) {
-        line("Congratulations, {$name}!");
-    } else {
-        line("Let's try again, {$name}!");
-    }
+    $introLine = "Answer \"yes\" if number even otherwise answer \"no\". \n";
+    $getRoundData = function () {
+        $minNumRange = 1;
+        $maxNumRange = 20;
+        $question = rand($minNumRange, $maxNumRange);
+        $isEven = $question % 2 == 0;
+        $correctAnswer = $isEven ? 'yes' : 'no';
+        return [$question, $correctAnswer];
+    };
+    startGame($introLine, $getRoundData);
 }

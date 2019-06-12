@@ -5,23 +5,34 @@ namespace Php\Project1\Index;
 use function \cli\line;
 use function \cli\prompt;
 
-function askQuestions()
+function startIntro()
 {
-    $rounds = 3;
-    for ($i = 0; $i < $rounds; $i++) {
-        $minNumRange = 1;
-        $maxNumRange = 20;
-        $number = rand($minNumRange, $maxNumRange);
-        line("Question: {$number}");
+    line("Welcome to the Brain Game!");
+    line();
+    $name = prompt('May I have your name?');
+    line("Hello, %s! \n", $name);
+    return $name;
+}
+
+function startGame(string $introLine, callable $getRoundData)
+{
+    $name = startIntro($introLine);
+    $hasWon = false;
+    $maxRounds = 3;
+    for ($i = 1; $i <= $maxRounds; $i++) {
+        [$question, $correctAnswer] = $getRoundData();
+        line("Question: {$question}");
         $answer = prompt('Your answer');
-        $isEven = $number % 2 == 0;
-        $correctAnswer = $isEven ? 'yes' : 'no';
         if ($answer == $correctAnswer) {
             line('Correct!');
+            $hasWon = $i == $maxRounds;
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-            return false;
+            line("Let's try again, {$name}!");
+            break;
         }
     }
-    return true;
+    if ($hasWon) {
+        line("Congratulations, {$name}!");
+    }
 }
