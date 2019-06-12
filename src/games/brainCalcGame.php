@@ -28,7 +28,7 @@ function startBrainCalc()
         $randNum1 = rand($minNumRange, $maxNumRange);
         $randNum2 = rand($minNumRange, $maxNumRange);
         $randSignIndex = rand($minSignRange, $maxSignRange);
-        $sign = $signs[$randomSignIndex];
+        $sign = $signs[$randSignIndex];
         $question = "{$randNum1} {$sign} {$randNum2}";
         $correctAnswer = getCorrectAsnwer($randNum1, $randNum2, $sign);
         return [$question, $correctAnswer];
