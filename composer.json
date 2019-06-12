@@ -1,6 +1,8 @@
 {
     "name": "arkadiy/php-project1",
     "description": "An educational project in written in PHP",
+    "type": "library",
+    "keywords": ["brain-games", "cli game"],
     "bin": [
       "bin/brain-games",
       "bin/brain-even",
@@ -15,7 +17,7 @@
     },
     "authors": [
         {
-            "name": "Arkadiy93",
+            "name": "Arkadiy Stepanov",
             "email": "arkadiy93@hotmail.com"
         }
     ],

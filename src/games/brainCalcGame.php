@@ -19,16 +19,16 @@ function getCorrectAsnwer($randNum1, $randNum2, $sign)
 function startBrainCalc()
 {
     $introLine = "What is the result of the expression?\n";
+    define("MIN_NUM_RANGE", 1);
+    define("MAX_NUM_RANGE", 10);
+    define("MIN_SIGN_RANGE", 0);
+    define("MAX_SIGN_RANGE", 2);
+    define("SIGNS", ['*', '+', '-']);
     $getRoundData = function () {
-        $minNumRange = 1;
-        $maxNumRange = 10;
-        $minSignRange = 0;
-        $maxSignRange = 2;
-        $signs = ['*', '+', '-'];
-        $randNum1 = rand($minNumRange, $maxNumRange);
-        $randNum2 = rand($minNumRange, $maxNumRange);
-        $randSignIndex = rand($minSignRange, $maxSignRange);
-        $sign = $signs[$randSignIndex];
+        $randNum1 = rand(MIN_NUM_RANGE, MAX_NUM_RANGE);
+        $randNum2 = rand(MIN_NUM_RANGE, MAX_NUM_RANGE);
+        $randSignIndex = rand(MIN_SIGN_RANGE, MAX_SIGN_RANGE);
+        $sign = SIGNS[$randSignIndex];
         $question = "{$randNum1} {$sign} {$randNum2}";
         $correctAnswer = getCorrectAsnwer($randNum1, $randNum2, $sign);
         return [$question, $correctAnswer];
