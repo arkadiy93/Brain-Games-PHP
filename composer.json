@@ -3,7 +3,8 @@
     "description": "An educational project in written in PHP",
     "bin": [
       "bin/brain-games",
-      "bin/brain-even"
+      "bin/brain-even",
+      "bin/brain-calc"
     ],
     "minimum-stability": "dev",
     "scripts": {
