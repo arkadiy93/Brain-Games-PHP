@@ -10,7 +10,12 @@ A simple command line game written in PHP
 
 ### Game modes
 * brain-even
+* brain-calc
 
 ### Brain-even
 
 [![asciicast](https://asciinema.org/a/251230.svg)](https://asciinema.org/a/251230)
+
+### Brain-calc
+
+[![asciicast](https://asciinema.org/a/251280.svg)](https://asciinema.org/a/251280)
