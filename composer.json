@@ -1,7 +1,7 @@
 {
     "name": "arkadiy/php-project1",
     "description": "An educational project in written in PHP",
-    "type": "library",
+    "type": "project",
     "keywords": ["brain-games", "cli game"],
     "bin": [
       "bin/brain-games",
@@ -11,7 +11,7 @@
       "bin/brain-progression",
       "bin/brain-prime"
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "scripts": {
       "phpcs": "phpcs"
     },
@@ -22,17 +22,14 @@
         }
     ],
     "autoload": {
-      "psr-4": {
-        "Php\\Project1\\": "src/"
-      },
       "files": [
         "src/cli.php",
         "src/index.php",
-        "src/games/brainEvenGame.php",
-        "src/games/brainCalcGame.php",
-        "src/games/brainGcdGame.php",
-        "src/games/brainProgressionGame.php",
-        "src/games/brainPrimeGame.php"
+        "src/games/even.php",
+        "src/games/calc.php",
+        "src/games/gcd.php",
+        "src/games/progression.php",
+        "src/games/prime.php"
       ]
   },
     "require": {
