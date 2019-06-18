@@ -29,7 +29,6 @@ function startBrainCalc()
         $a = rand(MIN_NUM_RANGE, MAX_NUM_RANGE);
         $b = rand(MIN_NUM_RANGE, MAX_NUM_RANGE);
         $sign = SIGNS[rand(MIN_SIGN_RANGE, MAX_SIGN_RANGE)];
-        var_dump(MAX_SIGN_RANG
         $question = "$a $sign $b";
         $correctAnswer = getCorrectAsnwer($a, $b, $sign);
         return [$question, $correctAnswer];

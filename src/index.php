@@ -5,7 +5,7 @@ namespace Php\Project1\Index;
 use function \cli\line;
 use function \cli\prompt;
 
-define("TOTAL_GAME_ROUNDS", 3);
+define("GAME_ROUNDS_COUNT", 3);
 
 function playGame(string $description, callable $getRoundData)
 {
@@ -13,7 +13,7 @@ function playGame(string $description, callable $getRoundData)
     line("$description\n");
     $name = rompt('May I have your name?');
     line("Hello, %s! \n", $name);
-    for ($i = 1; $i <= TOTAL_GAME_ROUNDS; $i++) {
+    for ($i = 1; $i <= GAME_ROUNDS_COUNT; $i++) {
         [$question, $correctAnswer] = $getRoundData();
         line("Question: $question");
         $answer = prompt('Your answer');
