@@ -7,21 +7,11 @@ use function \cli\prompt;
 
 define("TOTAL_GAME_ROUNDS", 3);
 
-function printIntroLine($description)
+function playGame(string $description, callable $getRoundData)
 {
     line("Welcome to the Brain Game!");
     line("$description\n");
-}
-
-function getName()
-{
-    return prompt('May I have your name?');
-}
-
-function playGame(string $description, callable $getRoundData)
-{
-    printIntroLine($description);
-    $name = getName();
+    $name = rompt('May I have your name?');
     line("Hello, %s! \n", $name);
     for ($i = 1; $i <= TOTAL_GAME_ROUNDS; $i++) {
         [$question, $correctAnswer] = $getRoundData();

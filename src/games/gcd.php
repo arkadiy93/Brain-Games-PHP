@@ -6,7 +6,7 @@ use function Php\Project1\Index\playGame;
 
 define("MIN_NUM_RANGE", 2);
 define("MAX_NUM_RANGE", 50);
-define("DESCRIPTION", "Find the greatest common divisor of given numbers.");
+define("GCD_DESCRIPTION", "Find the greatest common divisor of given numbers.");
 
 function startBrainGcd()
 {
@@ -17,6 +17,5 @@ function startBrainGcd()
         $correctAnswer = gmp_gcd($randNum1, $randNum2);
         return [$question, $correctAnswer];
     };
-    $description = DESCRIPTION;
-    playGame($description, $getRoundData);
+    playGame(GCD_DESCRIPTION, $getRoundData);
 }

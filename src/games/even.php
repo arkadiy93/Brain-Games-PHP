@@ -6,11 +6,11 @@ use function Php\Project1\Index\playGame;
 
 define("MIN_NUM_RANGE", 1);
 define("MAX_NUM_RANGE", 20);
-define("DESCRIPTION", "Answer \"yes\" if number even otherwise answer \"no\".");
+define("EVEN_DESCRIPTION", "Answer \"yes\" if number even otherwise answer \"no\".");
 
 function checkIfNumberEven($num)
 {
-    return $question % 2 == 0;
+    return $num % 2 == 0;
 }
 
 
@@ -22,6 +22,5 @@ function startBrainEven()
         $correctAnswer = $isEven ? 'yes' : 'no';
         return [$question, $correctAnswer];
     };
-    $description = DESCRIPTION;
-    playGame($description, $getRoundData);
+    playGame(EVEN_DESCRIPTION, $getRoundData);
 }

@@ -6,7 +6,7 @@ use function Php\Project1\Index\playGame;
 
 define("MIN_NUM_RANGE", 1);
 define("MAX_NUM_RANGE", 20);
-define("DESCRIPTION", "Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+define("PRIME_DESCRIPTION", "Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
 
 function startBrainPrime()
 {
@@ -16,6 +16,5 @@ function startBrainPrime()
         $correctAnswer = $isPrime == 0 ? 'no' : 'yes';
         return [$question, $correctAnswer];
     };
-    $description = DESCRIPTION;
-    playGame($description, $getRoundData);
+    playGame(PRIME_DESCRIPTION, $getRoundData);
 }
