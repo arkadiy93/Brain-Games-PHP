@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project1\Index;
+namespace App\src\index;
 
 use function \cli\line;
 use function \cli\prompt;
@@ -11,7 +11,7 @@ function playGame(string $description, callable $getRoundData)
 {
     line("Welcome to the Brain Game!");
     line("$description\n");
-    $name = rompt('May I have your name?');
+    $name = prompt('May I have your name?');
     line("Hello, %s! \n", $name);
     for ($i = 1; $i <= GAME_ROUNDS_COUNT; $i++) {
         [$question, $correctAnswer] = $getRoundData();

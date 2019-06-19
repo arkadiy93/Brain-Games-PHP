@@ -1,12 +1,12 @@
 <?php
 
-namespace Php\Project1\Games\Gcd;
+namespace App\src\games\gcd;
 
-use function Php\Project1\Index\playGame;
+use function App\src\index\playGame;
 
 define("MIN_NUM_RANGE", 2);
 define("MAX_NUM_RANGE", 50);
-define("GCD_DESCRIPTION", "Find the greatest common divisor of given numbers.");
+const DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
 function startBrainGcd()
 {
@@ -17,5 +17,5 @@ function startBrainGcd()
         $correctAnswer = gmp_gcd($randNum1, $randNum2);
         return [$question, $correctAnswer];
     };
-    playGame(GCD_DESCRIPTION, $getRoundData);
+    playGame(DESCRIPTION, $getRoundData);
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Php\Project1\Games\Prime;
+namespace App\src\games\prime;
 
-use function Php\Project1\Index\playGame;
+use function App\src\index\playGame;
 
 define("MIN_NUM_RANGE", 1);
 define("MAX_NUM_RANGE", 20);
-define("PRIME_DESCRIPTION", "Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+const DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
 
 function startBrainPrime()
 {
@@ -16,5 +16,5 @@ function startBrainPrime()
         $correctAnswer = $isPrime == 0 ? 'no' : 'yes';
         return [$question, $correctAnswer];
     };
-    playGame(PRIME_DESCRIPTION, $getRoundData);
+    playGame(DESCRIPTION, $getRoundData);
 }
