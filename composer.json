@@ -4,16 +4,15 @@
     "type": "project",
     "keywords": ["brain-games", "cli game"],
     "bin": [
-      "bin/brain-games",
-      "bin/brain-even",
-      "bin/brain-calc",
-      "bin/brain-gcd",
-      "bin/brain-progression",
-      "bin/brain-prime"
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
-    "minimum-stability": "stable",
     "scripts": {
-      "phpcs": "phpcs"
+        "phpcs": "phpcs"
     },
     "authors": [
         {
@@ -22,16 +21,16 @@
         }
     ],
     "autoload": {
-      "files": [
-        "src/cli.php",
-        "src/index.php",
-        "src/games/even.php",
-        "src/games/calc.php",
-        "src/games/gcd.php",
-        "src/games/progression.php",
-        "src/games/prime.php"
-      ]
-  },
+        "files": [
+            "src/cli.php",
+            "src/index.php",
+            "src/games/even.php",
+            "src/games/calc.php",
+            "src/games/gcd.php",
+            "src/games/progression.php",
+            "src/games/prime.php"
+        ]
+      },
     "require": {
         "wp-cli/php-cli-tools": "dev-master"
     },

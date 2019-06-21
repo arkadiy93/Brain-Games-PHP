@@ -1,15 +1,15 @@
 <?php
 
-namespace App\src\games\calc;
+namespace BrainGames\games\calc;
 
-use function App\src\index\playGame;
+use function BrainGames\index\playGame;
 
 define("SIGNS", ['*', '+', '-']);
-define("MIN_NUM_RANGE", 1);
-define("MAX_NUM_RANGE", 10);
+define("MIN_QUESTION_VAL", 1);
+define("MAX_QUESTION_VAL", 10);
 define("MIN_SIGN_RANGE", 0);
 define("MAX_SIGN_RANGE", count(SIGNS) - 1);
-const DESCRIPTION = "What is the result of the expression?";
+define("CALC_DESCRIPTION", "What is the result of the expression?");
 
 function getCorrectAsnwer($a, $b, $sign)
 {
@@ -26,12 +26,12 @@ function getCorrectAsnwer($a, $b, $sign)
 function startBrainCalc()
 {
     $getRoundData = function () {
-        $a = rand(MIN_NUM_RANGE, MAX_NUM_RANGE);
-        $b = rand(MIN_NUM_RANGE, MAX_NUM_RANGE);
+        $a = rand(MIN_QUESTION_VAL, MAX_QUESTION_VAL);
+        $b = rand(MIN_QUESTION_VAL, MAX_QUESTION_VAL);
         $sign = SIGNS[rand(MIN_SIGN_RANGE, MAX_SIGN_RANGE)];
         $question = "$a $sign $b";
         $correctAnswer = getCorrectAsnwer($a, $b, $sign);
         return [$question, $correctAnswer];
     };
-    playGame(DESCRIPTION, $getRoundData);
+    playGame(CALC_DESCRIPTION, $getRoundData);
 }

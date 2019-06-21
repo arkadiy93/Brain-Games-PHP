@@ -1,12 +1,12 @@
 <?php
 
-namespace App\src\games\even;
+namespace BrainGames\games\even;
 
-use function App\src\index\playGame;
+use function BrainGames\index\playGame;
 
-define("MIN_NUM_RANGE", 1);
-define("MAX_NUM_RANGE", 20);
-const DESCRIPTION = "Answer \"yes\" if number even otherwise answer \"no\".";
+define("MIN_QUESTION_VAL", 1);
+define("MAX_QUESTION_VAL", 20);
+define("EVEN_DESCRIPTION", "Answer \"yes\" if number even otherwise answer \"no\".");
 
 function isEven($a)
 {
@@ -16,9 +16,9 @@ function isEven($a)
 function startBrainEven()
 {
     $getRoundData = function () {
-        $question = rand(MIN_NUM_RANGE, MAX_NUM_RANGE);
+        $question = rand(MIN_QUESTION_VAL, MAX_QUESTION_VAL);
         $correctAnswer = isEven($question) ? 'yes' : 'no';
         return [$question, $correctAnswer];
     };
-    playGame(DESCRIPTION, $getRoundData);
+    playGame(EVEN_DESCRIPTION, $getRoundData);
 }

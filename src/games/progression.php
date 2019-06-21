@@ -1,34 +1,34 @@
 <?php
 
-namespace App\src\games\progression;
+namespace BrainGames\games\progression;
 
-use function App\src\index\playGame;
+use function BrainGames\index\playGame;
 
-define("MIN_NUM_RANGE", 2);
-define("MAX_NUM_RANGE", 50);
+define("MIN_STEP_RANGE", 2);
+define("MAX_STEP_RANGE", 50);
 define("MIN_INDEX_RANGE", 0);
 define("MAX_INDEX_RANGE", 9);
 define("STEP", 2);
 define("PROGRESSION_LENGTH", 10);
-const DESCRIPTION = "What number is missing in the progression?";
+define("PROG_DESCRIPTION", "What number is missing in the progression?");
 
 function startBrainProgression()
 {
     $getRoundData = function () {
         $progression = [];
-        $randNum = rand(MIN_NUM_RANGE, MAX_NUM_RANGE);
-        $randPossition = rand(MIN_INDEX_RANGE, MAX_INDEX_RANGE);
+        $initialProgStep = rand(MIN_STEP_RANGE, MAX_STEP_RANGE);
+        $hiddenStepPos = rand(MIN_INDEX_RANGE, MAX_INDEX_RANGE);
         for ($i = 0; $i < PROGRESSION_LENGTH; $i++) {
-            $a = $randNum + ($i * STEP);
-            if ($randPossition == $i) {
+            $currentProgStep = $initialProgStep + ($i * STEP);
+            if ($hiddenStepPos == $i) {
                 $progression[] = '..';
-                $correctAnswer = $a;
+                $correctAnswer = $currentProgStep;
             } else {
-                $progression[] = $a;
+                $progression[] = $currentProgStep;
             }
         }
         $question = implode(' ', $progression);
         return [$question, $correctAnswer];
     };
-    playGame(DESCRIPTION, $getRoundData);
+    playGame(PROG_DESCRIPTION, $getRoundData);
 }
