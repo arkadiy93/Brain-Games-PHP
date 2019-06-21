@@ -30,7 +30,7 @@
             "src/games/progression.php",
             "src/games/prime.php"
         ]
-      },
+    },
     "require": {
         "wp-cli/php-cli-tools": "dev-master"
     },
